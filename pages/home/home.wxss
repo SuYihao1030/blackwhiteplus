@@ -1,0 +1,119 @@
+/* pages/home/home.wxss */
+.container {
+  background-color: #fff;
+}
+
+swiper {
+  width: 100%;
+  height: auto;
+}
+
+swiper image {
+  width: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.search-view {
+  background-color: #000;
+  text-align: center;
+  height: 70rpx;
+  width: 100%;
+}
+
+.search-view input {
+  width: 96%;
+  background-color: #fff;
+  margin: 0 auto;
+  border-radius: 50px;
+  height: 60rpx;
+}
+
+.info {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 80rpx;
+}
+
+.info view {
+  width: 33%;
+  display: flex;
+  flex-direction: row;
+  text-align: center;
+}
+
+.info view image {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 10rpx;
+  margin-top: 20rpx;
+}
+
+.info view text {
+  font-size: 25rpx;
+  line-height: 80rpx;
+  color: #333;
+  margin-left: 5rpx;
+}
+
+.category-title {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rpx;
+  margin-bottom: 0rpx;
+}
+
+.category-title text {
+  font-size: 40rpx;
+  text-align: center;
+  margin: 10rpx auto;
+  color: #444;
+}
+
+.category-title view {
+  width: 80rpx;
+  height: 1rpx;
+  display: inline-block;
+  margin: 20rpx auto;
+  background-color: gainsboro;
+  text-align: center;
+}
+
+.goods {
+  display: flex;
+  flex-direction: row;
+}
+
+.goods-item {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx;
+}
+
+.goods-item image {
+  width: 280rpx;
+  height: 280rpx;
+}
+
+.goods-item text {
+  padding-top: 20rpx;
+  font-size: 25rpx;
+  line-height: 25rpx;
+}
+
+.goods-item p {
+  color: red;
+  font-size: 30rpx;
+  margin-top: 20rpx;
+  line-height: 30rpx;
+}
+
+.oldprice {
+  text-decoration: line-through;
+}
+
+.advertise image {
+  width: 100%;
+}

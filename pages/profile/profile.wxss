@@ -1,0 +1,112 @@
+/* pages/profile/profile.wxss */
+.userinfo {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #000;
+  height: 250rpx;
+}
+
+.userinfo button {
+  margin-top: 80rpx;
+}
+
+.userinfo-avatar {
+  width: 128rpx;
+  height: 128rpx;
+  margin: 20rpx;
+  border-radius: 50%;
+}
+
+.userinfo-nickname {
+  color: #fff;
+  margin-bottom: 20rpx;
+}
+
+.order {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 90rpx;
+}
+
+.myorder-text {
+  font-size: 30rpx;
+  color: #000;
+  margin: 20rpx;
+  width: 40%;
+}
+
+.myorderlook-text {
+  font-size: 30rpx;
+  color: #000;
+  position: relative;
+  right: 20rpx;
+  width: 60%;
+  text-align: right;
+}
+
+.next-image {
+  width: 20rpx;
+  height: 25rpx;
+  position: relative;
+  right: 10rpx;
+}
+
+.navs {
+  display: flex;
+}
+
+.nav-item {
+  width: 25%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  padding: 20rpx;
+}
+
+.nav-item image {
+  width: 60rpx;
+  height: 60rpx;
+  margin: 5rpx;
+}
+
+.nav-item text {
+  margin-top: 20rpx;
+  font-size: 25rpx;
+  color: #000;
+}
+
+.profile-list {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.list-item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+}
+
+.list-item image {
+  width: 50rpx;
+  height: 50rpx;
+  margin: 20rpx;
+}
+
+.list-item text {
+  color: #000;
+  font-size: 30rpx;
+  margin-left: 10rpx;
+  line-height: 80rpx;
+}
+
+.profile-line {
+  width: 100%;
+  height: 2rpx;
+  background-color: lightgray;
+  margin-left: 80rpx;
+}

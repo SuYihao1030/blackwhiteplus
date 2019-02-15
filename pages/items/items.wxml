@@ -1,0 +1,20 @@
+<!--pages/items/items.wxml-->
+<view class='container'>
+  <view class='item_left'>
+    <block wx:for="{{items}}" wx:key="key">
+      <view class="item_left_items {{curNav == item.item_id ? 'active' : ''}}" bindtap='switchRightTab' data-index="{{index}}" data-id='{{item.item_id}}'>
+        {{item.item_name}}
+      </view>
+    </block>
+  </view>
+  <view class='item_right'>
+    <block wx:for="{{items[curIndex].children}}" wx:key="key">
+      <view class='item_right_items'>
+        <navigator url='../goods/goods?id={{item.child_id}}'>
+          <image src='{{item.child_image}}'></image>
+          <text>{{item.child_name}}</text>
+        </navigator>
+      </view>
+    </block>
+  </view>
+</view>

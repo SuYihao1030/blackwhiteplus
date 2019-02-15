@@ -1,0 +1,7 @@
+<!--pages/search/search.wxml-->
+<view>
+  <view class='search-view'>
+    <input placeholder='搜索商品' confirm-type='search' />
+     <text>搜索</text> 
+  </view>
+</view>

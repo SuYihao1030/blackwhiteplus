@@ -1,0 +1,217 @@
+/* pages/detail/detail.wxss */
+page {
+  display: flex;
+  flex-direction: column;
+}
+
+swiper {
+  width: 100%;
+  height: auto;
+}
+
+swiper image {
+  width: 100%;
+  height: 100%;
+  display: inline-block;
+  overflow: hidden;
+}
+
+.good-info {
+  display: flex;
+  flex-direction: column;
+  margin-top: 15rpx;
+  margin-bottom: 0rpx;
+}
+
+.good-info .good-name {
+  font-size: 38rpx;
+  margin: 10rpx;
+  color: #333;
+  text-align: justify;
+}
+
+.good-info .good-dec {
+  font-size: 28rpx;
+  margin: 10rpx;
+  color: #ccc;
+  text-align: justify;
+}
+
+.good-info p {
+  color: red;
+  font-size: 38rpx;
+  margin: 10rpx;
+}
+
+.good-text {
+  display: block;
+  height: 60rpx;
+  line-height: 60rpx;
+  font-size: 30rpx;
+  margin: 10rpx;
+}
+
+.dialog-mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background: rgba(0, 0, 0, 0.7);
+  display: none;
+}
+
+.dialog-container {
+  position: fixed;
+  bottom: 0;
+  width: 750rpx;
+  background: #fff;
+  transform: translateY(150%);
+  transition: all 0.4s ease;
+  z-index: 11;
+}
+
+.dialog-show .dialog-container {
+  transform: translateY(0);
+}
+
+.dialog-show .dialog-mask {
+  display: block;
+}
+
+.image-good {
+  width: 200rpx;
+  height: 200rpx;
+  z-index: 12;
+  position: absolute;
+  left: 40rpx;
+  top: -100rpx;
+  border-radius: 20rpx;
+  background-color: #fff;
+}
+
+.image-close {
+  width: 40rpx;
+  height: 40rpx;
+  position: fixed;
+  right: 10rpx;
+  top: 10rpx;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  height: 100rpx;
+  width: 100%;
+}
+
+.column text {
+  font-size: 30rpx;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 80rpx;
+}
+
+.row text {
+  margin: 10rpx;
+}
+
+.border-line {
+  width: 100%;
+  height: 2rpx;
+  display: inline-block;
+  margin: 30rpx 0rpx;
+  background: gainsboro;
+  text-align: center;
+}
+
+.column p {
+  color: red;
+  position: relative;
+  left: 300rpx;
+  margin: 1rpx;
+  margin-top: 10rpx;
+}
+
+.column text {
+  position: relative;
+  left: 300rpx;
+  margin: 1rpx;
+}
+
+.row .quantity-position {
+  position: absolute;
+  right: 30rpx;
+}
+
+.good-remark {
+  display: block;
+  font-size: 25rpx;
+  line-height: 25rpx;
+  margin: 25rpx 10rpx;
+}
+
+.good-detail {
+  margin: 0;
+  padding: 0;
+}
+
+.good-detail p {
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.detail-image {
+  width: 100%;
+  margin: 0;
+  padding: 0;
+  display: block;
+}
+
+.temp {
+  height: 100rpx;
+}
+
+.detail-nav {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  float: left;
+  background-color: #fff;
+  position: fixed;
+  bottom: 0;
+  z-index: 1;
+  width: 100%;
+  height: 100rpx;
+}
+
+.detail-nav image {
+  width: 70rpx;
+  height: 50rpx;
+  margin: 20rpx 40rpx;
+}
+
+button {
+  color: #fff;
+  text-align: center;
+  display: inline-block;
+  font-size: 30rpx;
+  border-radius: 0rpx;
+  width: 50%;
+  height: 100%;
+  line-height: 100rpx;
+}
+
+.button-red {
+  background-color: #f44336;
+}
+
+.button-green {
+  background-color: #4caf50;
+}

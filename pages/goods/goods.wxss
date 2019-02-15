@@ -1,0 +1,47 @@
+/* pages/goods/goods.wxss */
+.scroll-view {
+  margin-top: 20rpx;
+}
+
+navigator {
+  display: inline;
+}
+
+.list-item {
+  width: 50%;
+  height: 400rpx;
+  overflow: hidden;
+  float: left;
+  margin-top: 20rpx;
+}
+
+.list-item .good-img {
+  width: 100%;
+  height: 300rpx;
+  text-align: center;
+}
+
+.list-item .good-img image {
+  width: 300rpx;
+  height: 300rpx;
+}
+
+.list-item .good-info {
+  width: 100%;
+  height: 100rpx;
+  text-align: center;
+}
+
+.list-item .good-info .good-title {
+  color: #333;
+  font-size: 30rpx;
+  line-height: 50rpx;
+  width: 100%;
+  text-overflow: ellipsis;
+}
+
+.list-item .good-info p {
+  color: #FF2727;
+  font-size: 30rpx;
+  line-height: 50rpx;
+}

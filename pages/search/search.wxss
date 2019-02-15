@@ -1,0 +1,23 @@
+/* pages/search/search.wxss */
+.search-view {
+  width: 100%;
+  background-color: #000;
+  height: 70rpx;
+  padding-top: 10rpx;
+  padding-left: 15rpx;
+}
+
+.search-view input {
+  width: 85%;
+  background-color: #fff;
+  border-radius: 5px;
+  height: 60rpx;
+  float: left;
+}
+
+.search-view text {
+  color: #fff;
+  font-size: 28rpx;
+  margin-left: 20rpx;
+  line-height: 60rpx;
+}

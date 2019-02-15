@@ -1,0 +1,17 @@
+<!--pages/goods/goods.wxml-->
+<scroll-view scroll-y='true'>
+  <block wx:for='{{goods}}' wx:key='key'>
+    <view class='list-item'>
+      <navigator url='../detail/detail?id={{item.goodId}}'>
+        <view class='good-img'>
+          <image src='{{item.goodImageUrl[0]}}'></image>
+        </view>
+        <view class='good-info'>
+          <view class='good-title'>{{item.goodName}}</view>
+          <p>¥{{item.goodNewPrice}}</p>
+        </view>
+      </navigator>
+      <!-- <view class='clear'></view> -->
+    </view>
+  </block>
+</scroll-view>

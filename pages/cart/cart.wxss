@@ -1,0 +1,143 @@
+/* pages/cart/cart.wxss */
+.scroll {
+  margin-bottom: 120rpx;
+}
+
+.item {
+  width: 100%;
+  height: 230rpx;
+  position: relative;
+  left: 0;
+  top: 0;
+  overflow: hidden;
+  border-bottom: 5rpx solid lightgray;
+}
+
+.cart_container {
+  display: flex;
+  flex-direction: row;  
+  width: 100%;
+  height: 230rpx;
+  position: absolute;
+  left: 0;
+  top: 0;
+  z-index: 100;
+  background-color: #fff;
+}
+
+.cart_select {
+  width: 40rpx;
+  height: 40rpx;
+  margin-top: 90rpx;
+  margin-left: 20rpx;
+}
+
+.cart_item_image {
+  width: 180rpx;
+  height: 180rpx;
+  margin: 20rpx;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.caet_item_title {
+  font-size: 38rpx;
+  margin-top: 40rpx;
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.cart_item_price {
+  color: red;
+  position: relative;
+  margin-top: 70rpx;
+}
+
+.cart_item_quantity {
+  margin-top: 60rpx;
+  margin-left: 100rpx;
+}
+
+.slide-menu {
+  position: absolute;
+  width: 100%;
+  height: 230rpx;
+  left: 0;
+  top: 0;
+  z-index: 0;
+}
+
+.menu-delete {
+  position: absolute;
+  width: 150rpx;
+  height: 230rpx;
+  right: 0;
+  background-color: #f44336;
+  color: #fff;
+  line-height: 230rpx;
+  text-align: center;
+}
+
+.menu-mark {
+  position: absolute;
+  width: 200rpx;
+  height: 230rpx;
+  right: 150rpx;
+  background-color: #ccc;
+  color: #fff;
+  text-align: center;
+  line-height: 230rpx;
+}
+
+.bottom_total {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  bottom: 0;
+  width: 100%;
+  height: 120rpx;
+  line-height: 120rpx;
+  background: #fff;
+}
+
+.bottom_line {
+  width: 100%;
+  height: 2rpx;
+  background: lightgray;
+}
+
+.cart_allselect {
+  width: 40rpx;
+  height: 40rpx;
+  margin-left: 20rpx;
+}
+
+.small_text {
+  font-size: 28rpx;
+  margin-right: 40rpx;
+  margin-left: 10rpx;
+}
+
+button {
+  position: fixed;
+  right: 0;
+  color: white;
+  text-align: center;
+  display: inline-block;
+  font-size: 30rpx;
+  width: 30%;
+  border-radius: 0rpx;
+  height: 120rpx;
+  line-height: 120rpx;
+}
+
+.button-red {
+  background: #f44336;
+}

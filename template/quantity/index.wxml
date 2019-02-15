@@ -1,0 +1,34 @@
+<!--template/quantity/index.wxml-->
+<template name="quantity">
+  <view class='quantity {{ size === "small" ? "quantity_small" : "" }} '>
+    <view
+      class='quantity_minus {{ quantity <= min ? "quantity_disabled" : "" }}'
+      data-component-id='{{componentId}}'
+      data-quantity="{{quantity}}"
+      data-disabled="{{quantity <= min}}"
+      bindtap="handleQuantityMinus"
+    >
+      -
+    </view>
+    <input
+      class='quantity_text {{ min >= max ? "quantity_disabled" : ""}}'
+      type='number'
+      data-component-id='{{componentId}}'
+      data-min='{{min}}'
+      data-max='{{max}}'
+      value='{{quantity}}'
+      disabled='{{min >= max}}'
+      bindblur='handleQuantityBlur'
+    >
+    </input>
+    <view
+      class='quantity_plus {{ quantity >= max ? "quantity_disabled" : "" }}'
+      data-component-id='{{componentId}}'
+      data-quantity="{{quantity}}"
+      data-disabled="{{quantity >= max}}"
+      bindtap="handleQuantityPlus"
+    >
+      +
+    </view>
+  </view>
+</template>

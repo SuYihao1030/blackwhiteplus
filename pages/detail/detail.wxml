@@ -1,0 +1,59 @@
+<!--pages/detail/detail.wxml-->
+<import src='/template/quantity/index.wxml' />
+<swiper indicator-dots='{{indicatorDots}}' indicator-color='{{indicatorColor}}' indicator-active-color='{{indicatorActiveColor}}' autoplay='{{autoplay}}' circular='{{circular}}' vertical='{{vertical}}' interval='{{interval}}' duration='{{duration}}' style='height:{{bannerHeight}}px'>
+  <block wx:for='{{goods.goodImageUrl}}' wx:key='key'>
+    <swiper-item>
+      <image src='{{item}}' bindload='imageLoad' bindtap='previewImage'></image>
+    </swiper-item>
+  </block>
+</swiper>
+
+<scroll-view sctoll-y='true'>
+  <view class='good-info'>
+    <text class='good-name'>{{goods.goodName}}</text>
+    <text class='good-dec'>{{goods.goodDec}}</text>
+    <p>¥{{goods.goodNewPrice}}</p>
+  </view>
+  <view class='separate'></view>
+  <text class='good-text' bindtap='toggleDialog'>数量规格选择</text>
+  <view class='dialog {{showDialog ? "dialog-show" : ""}}'>
+    <view class='dialog-mask' bindtap='toggleDialog'></view>
+    <view class='dialog-container'>
+      <view class='row'>
+        <image class='image-close' bindtap='closeDialog' src='../../images/detail/icon-close.png'></image>
+        <image class='image-good' src='{{goods.goodImageUrl[0]}}'></image>
+        <view class='column'>
+          <p>¥{{goods.goodNewPrice}}</p>
+          <text>库存{{goods.goodQuantity.max}}件</text>
+        </view>
+      </view>
+      <text class='border-line'></text>
+      <view class='row'>
+        <text>购买数量</text>
+        <view class='quantity-position'>
+          <template is='quantity' data='{{...goods.goodQuantity, componentId: "goods.goodQuantity"}}' />
+        </view>
+      </view>
+      <text class='border-line'></text>
+      <button class='button-green' bindtap='addCart' form-type='submit'>加入购物车</button>
+      <button class='button-red' bindtap='immeBuy' form-type='submit'>立即购买</button>
+    </view>
+  </view>
+  <view class='separate'></view>
+  <text class='good-text'>用户评价</text>
+  <view class='line'></view>
+  <text class='good-remark'>{{goods.goodRemark[0]}}</text>
+  <view class='separate'></view>
+  <text class='good-text'>商品详情</text>
+  <view class='good-detail' wx:for='{{goods.goodDetailImageUrl}}' wx:key='key'>
+    <image class='detail-image' src='{{item}}' mode="widthFix"></image>
+  </view>
+  <view class='temp'></view>
+</scroll-view>
+<view class='detail-nav'>
+  <image src='../../images/icon/cart.png' bindtap='toCart'></image>
+  <view class='nav-line'></view>
+  <image src='{{isLike ? "../../images/detail/icon-like.png" : "../../images/detail/icon-unlike.png"}}' bindtap='addLike'></image>
+  <button class='button-green' bindtap='toggleDialog' form-type='submit'>加入购物车</button>
+  <button class='button-red' bindtap='toggleDialog' form-type='submit'>立即购买</button>
+</view>

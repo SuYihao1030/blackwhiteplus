@@ -1,0 +1,35 @@
+<!--pages/profile/profile.wxml-->
+<view class='container'>
+  <view class="userinfo">
+    <button wx:if="{{!hasUserInfo && canIUse}}" open-type="getUserInfo" bindgetuserinfo="getUserInfo"> 微信登录 </button>
+    <block wx:else>
+      <image class="userinfo-avatar" src="{{userInfo.avatarUrl}}" background-size="cover"></image>
+      <text class="userinfo-nickname">{{userInfo.nickName}}</text>
+    </block>
+  </view>
+  <view class='separate'></view>
+  <view class='order' catchtap='toOrder'>
+    <text class='myorder-text'>我的订单</text>
+    <text class='myorderlook-text'>查看全部订单</text>
+    <image class='next-image' src='../../images/profile/arrow-right.png'></image>
+  </view>
+</view>
+<view class='line'></view>
+<view class='navs'>
+  <block wx:for-items='{{orderItems}}' wx:key='name'>
+    <view class='nav-item' data-type='{{item.name}}' data-id='item.id'>
+      <image src='{{item.imageUrl}}'></image>
+      <text>{{item.name}}</text>
+    </view>
+  </block>
+</view>
+<view class='separate'></view>
+<view class='profile-list'>
+  <block wx:for-items='{{profileList}}' wx:key='name'>
+    <view class='list-item' data-type='{{item.name}}' data-id='item.id'>
+      <image src='{{item.imageUrl}}'></image>
+      <text>{{item.name}}</text>
+    </view>
+    <view class='profile-line'></view>
+  </block>
+</view>

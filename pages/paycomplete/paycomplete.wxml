@@ -1,0 +1,5 @@
+<!--pages/paycomplete/paycomplete.wxml-->
+<view class="user">
+  <image src="../../images/icon/paycomplete.png" style="height:200rpx;width:200rpx;" />
+  <button bindtap="continue" style="margin-top:50px;width:250px;">点击继续购物</button>
+</view>

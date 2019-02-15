@@ -1,0 +1,72 @@
+<!--pages/home/home.wxml-->
+<view class='container'>
+  <view class='search-view'>
+    <input placeholder='搜索商品' disabled='true' bindtap='search' />
+  </view>
+  <swiper indicator-dots='{{indicatorDots}}' indicator-color='{{indicatorColor}}' indicator-active-color='{{indicatorActiveColor}}' autoplay='{{autoplay}}' circular='{{circular}}' vertical='{{vertical}}' interval='{{interval}}' duration='{{duration}}' style='height:{{bannerHeight}}px'>
+    <block wx:for='{{adList}}' wx:key='key'>
+      <swiper-item>
+        <image src='{{item.picUrl}}' bindload='imageLoad'></image>
+      </swiper-item>
+    </block>
+  </swiper>
+  <view class='info'>
+    <view>
+      <image src='../../images/home/red-circle.png'></image>
+      <text>黑白+自营品牌</text>
+    </view>
+    <view>
+      <image src='../../images/home/red-circle.png'></image>
+      <text>30天无忧退货</text>
+    </view>
+    <view>
+      <image src='../../images/home/red-circle.png'></image>
+      <text>48小时快速退款</text>
+    </view>
+  </view>
+  <view class='separate'></view>
+  <view class='category-container'>
+    <view class='category-title'>
+      <text>最新折扣</text>
+      <view></view>
+    </view>
+    <scroll-view scroll-x='true'>
+      <view class='goods'>
+        <block wx:for='{{goodsItems}}' wx:key='key'>
+          <navigator url='../detail/detail?id={{item.goodId}}'>
+            <view class='goods-item' data-type='{{item.goodName}}' data-typeid='{{item.typeid}}'>
+              <image src='{{item.goodImageUrl[0]}}'></image>
+              <text>{{item.goodName}}</text>
+              <p class='oldprice'>¥{{item.goodOldPrice}}</p>
+              <p>¥{{item.goodNewPrice}}</p>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </scroll-view>
+  </view>
+  <view class='separate'></view>
+  <block wx:for='{{advertise}}' wx:for-item='item' wx:key='key'>
+    <view class='advertise'>
+      <image src='{{item.imageUrl}}' mode="widthFix"></image>
+    </view>
+  </block>
+  <view class='spearate'></view>
+  <view class='category-container'>
+    <view class='category-title'>
+      <text>新品推荐</text>
+      <view></view>
+    </view>
+    <block wx:for-items='{{recommends}}' wx:key='key'>
+      <navigator url='../detail/detail?id={{item.goodId}}'>
+        <view class='goods-item'>
+          <image src='{{item.goodImageUrl[0]}}'></image>
+          <text>{{item.goodName}}</text>
+          <p>¥{{item.goodNewPrice}}</p>
+          <p></p>
+          <view class='line'></view>
+        </view>
+      </navigator>
+    </block>
+  </view>
+</view>
